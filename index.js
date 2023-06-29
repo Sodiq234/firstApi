@@ -46,7 +46,7 @@ app.post('/user/add', (req,res) =>{
             status: false,
             message: "All fields are required"
         })}
- 
+ // To collect new data 
     const tempData = {
         id: data.length + 1,
         name,
@@ -54,7 +54,7 @@ app.post('/user/add', (req,res) =>{
         address,
         phone
     };
-
+// To add the new data to the existing datastore
     data.push(tempData)
 
     res.json({
