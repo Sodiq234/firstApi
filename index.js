@@ -90,7 +90,7 @@ app.put('/user/update', (req,res) =>{
 })
 
 app.delete('/users/:userId', (req, res) => {
-    const userId = req.params.userId;
+    const userId = parseInt(req.params.userId);
   
     // Find the index of the user with the specified userId
     const userIndex = data.findIndex(item => item.id === userId);
@@ -108,7 +108,7 @@ app.delete('/users/:userId', (req, res) => {
 
       res.json({
         status: true,
-        message: "created successfully updated" ,
+        message: "user successfully deleted" ,
         data: data
      })}
   });
